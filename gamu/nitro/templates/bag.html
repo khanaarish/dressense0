@@ -1,0 +1,29 @@
+ {% extends 'base.html' %} {% block content %}
+
+
+<div style="height: 90vh; overflow-y: scroll; overflow-x: hidden;">
+
+    <div style=' height: 90vh; overflow: scroll;'>
+
+        <div class="cart d-flex flex-column justify-content-center align-items-center h-100">
+
+            <img src="/static/empty_bag.jpg" alt="Man on cart" class=' w-100 '>
+            <h4>Your Bag is <span style="color: purple">Empty</span></h4>
+
+            <div class="container d-buttons">
+                <div class="row">
+
+                    <a href="index.html" class='col-5 mx-auto btn btn-primary p-2 shopping-btn '>Continue Shopping</a>
+
+                    <a href="account.html" class='mx-auto col-5 btn btn-primary p-2 join-btn '>Join</a>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

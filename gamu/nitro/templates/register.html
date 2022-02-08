@@ -1,0 +1,52 @@
+{% extends 'base.html' %} {% block content %}
+
+
+<!-- register form section starts -->
+
+<section class="register-form">
+
+    <form method="post">
+        {% csrf_token %} {% if error %}
+        <div class="inputbox">
+            {{error}}
+        </div>
+        {% endif %}
+
+        <h3>register now</h3>
+        <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="text" name="name" placeholder="enter your name" id="">
+        </div>
+        <div class="inputBox">
+            <span class="fas fa-envelope"></span>
+            <input type="email" name="email" placeholder="enter your email" id="">
+        </div>
+        <div class="inputBox">
+            <span class="fas fa-mobile"></span>
+            <input type="text" name="phone" placeholder="enter your mobile no" id="">
+        </div>
+        <div class="inputBox">
+            <span class="fas fa-code"></span>
+            <input type="password" name="password" placeholder="enter your password" id="">
+        </div>
+
+        <input type="submit" value="sign up" class="btn">
+        <a href="login" class="btn">already have an account</a>
+    </form>
+
+</section>
+
+<!-- register form section ends -->
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}

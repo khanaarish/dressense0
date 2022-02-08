@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="title">Become vendor</h1>
+
+<form method="post" action=".">
+    {% csrf_token %} {{ form.as_p }}
+
+    <div class="field">
+        <div class="control">
+            <button class="button is-dark is-uppercase">Sign up</button>
+        </div>
+    </div>
+</form>
+
+<div class="mb-3 col-10 mx-auto text-center">
+    <p>Already have an account <a class='acc-link' href="{% url 'login' %}">Log in</a></p>
+</div>
+{% endblock %}
