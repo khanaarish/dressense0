@@ -21,12 +21,12 @@
 
 <div class="columns is-multiline mb-6">
     <div class="column is-12 has-text-centered mt-6 mb-6">
-        <h2 class="is-size-3">Newest products</h2>
+        <h2 class="is-size-3">{{ category.title }}</h2>
     </div>
 
     <div class="container">
         <div class="row">
-            {% for goproduct in newest_products %}
+            {% for goproduct in category.goproducts.all %}
             <div class="col-6 g-1">
                 <div class="column is-3 product-list-item container">
                     <div class="row">

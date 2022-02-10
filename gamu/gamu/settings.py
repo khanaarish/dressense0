@@ -31,6 +31,9 @@ LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL = 'vendor_admin'
 LOGOUT_REDIRECT_URL = 'homepage'
 
+SESSION_COOKIE_AGE = 86400
+CART_SESSION_ID = 'cart'
+
 
 # Application definition
 
@@ -44,8 +47,10 @@ INSTALLED_APPS = [
     'nitro',
     'vendor',
     'product',
-    'goproduct'
+    'goproduct',
+    'cart'
 ]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -70,6 +75,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'goproduct.context_processors.menu_categories',
+                'cart.context_processors.cart'
             ],
         },
     },

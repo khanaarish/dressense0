@@ -42,10 +42,11 @@
             </div>
 
             <div class="row">
-
-                <div class="col-12 py-2 topbar1 d-flex align-items-center justify-content-center">
-                    <input type="search" placeholder='Search by Stores, Products and more...'>
-                </div>
+                <form method="get" action="{% url 'search' %}">
+                    <div class="col-12 py-2 topbar1 d-flex align-items-center justify-content-center">
+                        <input type="search" placeholder='Search by Stores, Products and more...' name="query">
+                    </div>
+                </form>
 
             </div>
 
@@ -80,7 +81,7 @@
 
 
             <div class="col icons mx-2">
-                <a href='bag' class='icons'>
+                <a href="{% url 'cart' %}" class='icons' Cart{% if cart %} ({{ cart|length }}){% endif %}>
                     <i class="fas fa-shopping-bag fa-sm my-1"></i>
                     <h6 class="my-1">Bag</h6>
                 </a>

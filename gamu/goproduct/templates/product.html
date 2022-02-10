@@ -1,0 +1,132 @@
+{% extends 'base.html' %} {% block content %}
+<style>
+    body {
+        background-color: #f5f5f5;
+    }
+    
+    .car {
+        width: 100vw !important;
+        background-color: white;
+    }
+    
+    .size {
+        border: none;
+        background-color: white;
+        box-shadow: 0 0 5px #ccc;
+        border-radius: 5px;
+        height: 50px;
+        width: 50px;
+    }
+    
+    .details {
+        background-color: white;
+        margin: 10px auto;
+    }
+    
+    .det {
+        width: 100vw !important;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .link a {
+        background-color: #ccc;
+        border-radius: 5px;
+        color: black;
+        text-decoration: none;
+    }
+    
+    .bagbtn {
+        background-color: black !important;
+        color: #ccc !important;
+    }
+    
+    .carousel-item img {
+        height: 60vh !important;
+        width: 100vw !important;
+    }
+</style>
+</head>
+
+<body>
+    <div class="container-fluid car">
+
+        <div class="row">
+            <div class="col-12">
+                <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner w-100">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <img src="https://picsum.photos/200/300?random=1" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="https://picsum.photos/200/300?random=2" class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <img src="https://picsum.photos/200/300?random=3" class="d-block w-100" alt="...">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid det">
+
+        <div class="row details">
+            <span class="py-1 my-0"><h4 class="p-0 my-0">Product Name</h4></span>
+            <span class="py-1 my-0"><p class="p-0 my-0">Lorem ipsum dolor sit amet consectetur</p></span>
+            <div class="d-flex row">
+                <span class="col-3"><p><b>$400</b></p></span>
+                <span class="col-3"><p><strike>$400</strike></p></span>
+                <span class="col-3"><p class="text-success">40% OFF</p></span>
+            </div>
+        </div>
+
+        <div class="row details p-1">
+            <span class="col-12 py-1">
+            <h5>Select Size</h5>
+        </span>
+            <div class="col">
+                <form action="" class="d-flex">
+                    <button class="m-2 p-2 size">30</button>
+                    <button class="m-2 p-2 size">32</button>
+                    <button class="m-2 p-2 size">34</button>
+                    <button class="m-2 p-2 size">36</button>
+                    <button class="m-2 p-2 size">38</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- <div class="row details py-3">
+        <div class="col-7">
+            <h5>Delivery Details</h5>
+        </div>
+        <div class="col-5">
+            <a href="#">Check delivery date</a>
+        </div>
+    </div> -->
+
+        <div class="row details py-3">
+            <div class="col-12">
+                <h5>Returns</h5>
+            </div>
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse quod ipsam a delectus sed quo consequuntur iusto et voluptatum quia!</p>
+            </div>
+        </div>
+
+        <div class="row details py-2">
+            <div class="col-2 d-flex justify-content-center align-items-center link">
+                <a href="#" class="p-2 w-100 d-flex justify-content-center align-items-center">Share</a>
+            </div>
+            <div class="col-2 d-flex justify-content-center align-items-center link">
+                <a href="#" class="p-2 w-100 d-flex justify-content-center align-items-center">Like</a>
+            </div>
+            <div class="col-8 d-flex justify-content-center align-items-center link">
+                <a href="#" class="p-2 w-100 d-flex justify-content-center align-items-center bagbtn">Add to Bag</a>
+            </div>
+        </div>
+    </div>
+
+    {% endblock %}
